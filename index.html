@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux 9.00 </title>
+    <link rel="stylesheet" href="Linux.css">
+    <script>
+        if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+    </script>
+</head>
+<body>
+    <div id="hellobar-bar" class="regular closable">
+        <div class="hb-content-wrapper">
+            <div class="hb-text-wrapper">
+                <div class="hb-headline-text">
+                    <p><span class="war">Warning:</span><span> Start the jailbreak to use these features</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="hb-close-wrapper">
+            <a href="javascript:void(0);" class="icon-close">✖</a>
+        </div>
+    </div>
+    <h1 class="linuxtitle"  id="msgs" style='font-size:40px;'>Linux PS4 9.00 &nbsp;&nbsp;</h1>
+    <div class="linuxbutton" id=mybuttons style=text-align:center>
+        <button class="linux btn"  onclick=load_linux()>Linux</button>
+        <button class="linux btn"  onclick=load_linux2()>Linux2G</button>
+        <br>
+        <button class="linux btn"  onclick=load_linux3()>Linux3G</button>
+        <button class="linux btn"  onclick=load_linux4()>Linux4G</button>
+        <br>
+        <button class="linux btn"  onclick=load_linux5()>Linux5G</button>
+        <a href="index.html"><button class="linux btn">Restart</button></a>
+    </div>
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+      </div>
+</body>
+<script>
+    function toogle_payload(){
+var req = new XMLHttpRequest();
+req.responseType = "arraybuffer";
+req.open("GET",PLfile,true);
+req.send();
+req.onreadystatechange=function(){
+if (req.readyState == 4){
+  var tmp0 = new Uint8Array(req.response.byteLength);
+  tmp0.set(new Uint8Array(req.response), 0);
+  var payload = new Uint32Array(tmp0);
+  the_payload = payload;
+  setTimeout(poc, 1500);
+  }
+};
+}
+
+function load_linux(){
+msgs.innerHTML="Linux Loading Please Wait !!!";
+LoadedMSG="Linux Loaded... Press OK Now !!!";
+PLfile = "payloas/Linux.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_linux2(){
+msgs.innerHTML="Linux2GB Loading Please Wait !!!";
+LoadedMSG="Linux2GB Loaded... Press OK Now !!!";
+PLfile = "payloas/Linux2GB.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_linux3(){
+msgs.innerHTML="Linux3GB Loading Please Wait !!!";
+LoadedMSG="Linux3GB Loaded... Press OK Now !!!";
+PLfile = "payloas/Linux3GB.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_linux4(){
+msgs.innerHTML="Linux4GB Loading Please Wait !!!";
+LoadedMSG="Linux4GB Loaded... Press OK Now !!!";
+PLfile = "payloas/Linux4GB.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_linux5(){
+msgs.innerHTML="Linux5GB Loading Please Wait !!!";
+LoadedMSG="Linux5GB Loaded... Press OK Now !!!";
+PLfile = "payloas/Linux5GB.bin";
+exec_type = "payload";
+toogle_payload();
+}
+</script>
+
+<script src="js/int64.js"></script>
+  <script src="js/rop.js"></script>
+  <script src="js/kexploit.js"></script>
+  <script src="js/webkit.js"></script>
+</html>
